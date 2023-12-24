@@ -22,7 +22,7 @@ const map = new Map({
   layers: [raster, vector],
   target: 'map',
   view: new View({
-    center: [-11000000, 4600000],
+    center: fromLonLat([103.32323,23.233]),
     zoom: 4,
   }),
 });
