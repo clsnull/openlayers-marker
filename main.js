@@ -185,8 +185,10 @@ map.once("rendercomplete",function(){
     // 这里有一个问题，就是当地图第一次加载的时候，会出现stationPixel计算不正确的问题
     let stationPixel=map.getPixelFromCoordinate(stationCoordinate);
     // 计算屏幕像素偏移量
-    stationPixel=[stationPixel[0],stationPixel[1]];
+    stationPixel=[stationPixel[0]+picOffsetX,stationPixel[1]-picOffsetY];
+    console.log(34334, stationPixel)
     let offsetCoordinate=map.getCoordinateFromPixel(stationPixel);
+    console.log(34334, offsetCoordinate)
     markerOverlay.set("offsetCoordinate",offsetCoordinate); // 也就是偏移点坐标
 
     // 删除已有的连线
